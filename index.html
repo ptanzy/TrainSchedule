@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Timesheet</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+</head>
+<body class>
+    <div class="jumbotron jumbotron-fluid text-center bg-dark text-light">
+        <div class="container">
+          <h1 class="display-4">Empire Express Schedule</h1>
+          <p class="lead">Next Trains Scheduled For Departure</p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header bg-dark text-light">
+                      Current Train Schedule
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-striped">
+                            <thead>
+                              <tr>
+                                <th scope="col">Train Name</th>
+                                <th scope="col">Destination</th>
+                                <th scope="col">Frequency (min)</th>
+                                <th scope="col">Next Arrival</th>
+                                <th scope="col">Minutes Away</th>                              
+                              </tr>
+                            </thead>
+                            <tbody id="table">
+                                
+                            </tbody>
+                          </table>
+                    </div>
+                  </div>                                
+            </div>                        
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header bg-dark text-light">
+                      Add Train
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group">
+                              <label for="name">Employee Name</label>
+                              <input type="text" class="form-control" id="name-input">
+                            </div>
+                            <div class="form-group">
+                              <label for="role">Destination</label>
+                              <input type="text" class="form-control" id="dest-input">
+                            </div>
+                            <div class="form-group">
+                              <label for="sdate">Frequency (min)</label>
+                              <input type="date" class="form-control" id="freq-input">
+                            </div>
+                            <div class="form-group">
+                                <label for="rate">First Train Time (HH:mm - military time)</label>
+                                <input type="number" class="form-control" id="time-input">
+                              </div>
+                            <div class="form-group">
+                                <button class="btn btn-primary" id="submit-input">Submit</button>
+                            </div>
+                          </form>
+                    </div>
+                  </div>
+            </div>                                    
+        </div>        
+      </div>
+
+      <script src="main.js"></script>
+</body>
+</html>
+
+<!--  
+tbl-name
+tbl-dest
+tbl-freq
+tbl-arr
+tbl-away
+    
+name-input
+dest-input
+freq-input
+rate-input
+submit-input                
+-->
