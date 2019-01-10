@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
@@ -65,12 +66,12 @@
                               <input type="text" class="form-control" id="dest-input">
                             </div>
                             <div class="form-group">
-                              <label for="sdate">Frequency (min)</label>
-                              <input type="date" class="form-control" id="freq-input">
+                              <label for="freq">Frequency (min)</label>
+                              <input type="number" class="form-control" id="freq-input">
                             </div>
                             <div class="form-group">
-                                <label for="rate">First Train Time (HH:mm - military time)</label>
-                                <input type="number" class="form-control" id="time-input">
+                                <label for="time">First Train Time (hh:mm)</label>
+                                <input type="time" class="form-control" id="time-input" >
                               </div>
                             <div class="form-group">
                                 <button class="btn btn-primary" id="submit-input">Submit</button>
@@ -82,7 +83,7 @@
         </div>        
       </div>
 
-      <script src="main.js"></script>
+      <script src="assets/javascript/main.js"></script>
 </body>
 </html>
 
